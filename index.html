@@ -137,4 +137,25 @@
 <!-- Decorative Spacer -->
 <div class="h-10 bg-background-light dark:bg-background-dark"></div>
 </div>
-</body></html>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const vehicle = {
+    plate: document.querySelector('input[placeholder="ABC-1234"]').value,
+    brand: document.querySelector('input[placeholder="Toyota"]').value,
+    model: document.querySelector('input[placeholder="Corolla"]').value,
+    year: document.querySelector('input[placeholder="2023"]').value,
+    odometer: document.querySelector('input[placeholder="45,000"]').value,
+    owner: document.querySelector('input[placeholder="John Doe"]').value,
+    phone: document.querySelector('input[placeholder="+1 (555) 000-0000"]').value
+  };
+
+  let vehicles = JSON.parse(localStorage.getItem("vehicles")) || [];
+  vehicles.push(vehicle);
+  localStorage.setItem("vehicles", JSON.stringify(vehicles));
+
+  alert("Vehicle saved successfully!");
+  this.reset();
+});
+</script></body></html>
