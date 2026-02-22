@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oil Maintenance Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(19, 127, 236, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Header -->
+<header class="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50 backdrop-blur-md sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 cursor-pointer">arrow_back</span>
+<h1 class="text-lg font-bold tracking-tight">Oil Maintenance</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400 cursor-pointer">more_vert</span>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto custom-scrollbar pb-24">
+<!-- Vehicle Identification Card -->
+<section class="p-4">
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-4 flex gap-4 items-center border border-slate-200 dark:border-slate-800">
+<div class="size-16 rounded-lg bg-cover bg-center bg-no-repeat" data-alt="Side profile of a luxury dark sedan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0Nuw2ot1QQwBKcQYXmi-KfF0LDY4Yrja2qU7v9SJWAtkMG0lC4hwA2kjD6KfpMxMNB9BxOrtwugG22kjOB21MumYHGSMmo1hlPmcd73u_IQh4NcgzUTKYu_wK7OQc6Ea_iCPFcGckiHrYSKBoleVOGsGhP2wMj85bZl3XoIZ5Sx-hnMHTyRAyE5eKZ1SYAol4wshhY-IcCHV30DNELKpx5B0NWEmU3rb_RGqVOW07_4188FGMQcfAie4TmSLMcTGkkAfk92_6nScW')"></div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h2 class="text-xl font-800">2023 BMW M3</h2>
+<span class="size-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Plate: B-MW 320 • 14,250 miles</p>
+</div>
+<button class="bg-primary/10 text-primary p-2 rounded-lg">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+</section>
+<!-- High Contrast Service Alert -->
+<section class="px-4">
+<div class="bg-primary dark:bg-primary rounded-xl p-5 text-white shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">oil_barrel</span>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<div>
+<p class="text-primary-100 text-xs font-bold tracking-widest uppercase opacity-80">Next Service Due In</p>
+<p class="text-4xl font-800 tracking-tighter mt-1">1,200 <span class="text-lg font-medium opacity-80 tracking-normal">miles</span></p>
+</div>
+<div class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
+<p class="text-xs font-bold">Nov 2024</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold">
+<span>OIL LIFE REMAINING</span>
+<span>85%</span>
+</div>
+<div class="h-3 w-full bg-white/20 rounded-full overflow-hidden border border-white/10">
+<div class="h-full bg-white rounded-full transition-all duration-500" style="width: 85%"></div>
+</div>
+<p class="text-xs text-white/70 italic">Last full change at 10,000 miles</p>
+</div>
+<button class="w-full mt-6 bg-white text-primary font-800 py-3 rounded-lg text-sm hover:bg-slate-100 transition-colors">
+                        SCHEDULE SERVICE NOW
+                    </button>
+</div>
+</div>
+</section>
+<!-- Insights Summary -->
+<section class="p-4 grid grid-cols-2 gap-3">
+<div class="bg-white dark:bg-slate-800/30 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold mb-1 uppercase">Avg. Consumption</p>
+<div class="flex items-baseline gap-1">
+<p class="text-lg font-800">0.5</p>
+<p class="text-xs font-medium text-slate-500">qt / 2k mi</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/30 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold mb-1 uppercase">Oil Type</p>
+<p class="text-lg font-800">5W-30 Synth</p>
+</div>
+</section>
+<!-- Chronological Timeline -->
+<section class="px-4 mt-2">
+<div class="flex justify-between items-center mb-4 px-1">
+<h3 class="font-800 text-lg">History &amp; Consumption</h3>
+<span class="text-primary text-sm font-bold cursor-pointer">View All</span>
+</div>
+<div class="space-y-4 relative before:content-[''] before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-0.5 before:bg-slate-200 dark:before:bg-slate-800">
+<!-- Timeline Item: Top-up -->
+<div class="flex gap-4 relative">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-4 border-background-light dark:border-background-dark z-10">
+<span class="material-symbols-outlined text-primary text-xl">opacity</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-bold">Consumption Top-up</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Oct 12, 2023 • 13,800 miles</p>
+</div>
+<span class="text-slate-900 dark:text-white font-800">0.5 qt</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item: Full Change -->
+<div class="flex gap-4 relative">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border-4 border-background-light dark:border-background-dark z-10">
+<span class="material-symbols-outlined text-primary text-xl font-fill">oil_barrel</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800 ring-2 ring-primary/20">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-bold text-primary">Full Oil Service</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">Aug 05, 2023 • 10,000 miles</p>
+<div class="flex gap-2 mt-3">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-bold text-slate-600 dark:text-slate-300">FILTER CHANGED</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded text-[10px] font-bold text-slate-600 dark:text-slate-300">FULL SYNTHETIC</span>
+</div>
+</div>
+<span class="text-slate-900 dark:text-white font-800">6.5 qt</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item: Top-up -->
+<div class="flex gap-4 relative opacity-60">
+<div class="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-4 border-background-light dark:border-background-dark z-10">
+<span class="material-symbols-outlined text-slate-500 text-xl">opacity</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-800/40 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-bold">Consumption Top-up</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium mt-1">June 20, 2023 • 7,200 miles</p>
+</div>
+<span class="text-slate-900 dark:text-white font-800">0.2 qt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-24 right-6">
+<button class="size-14 rounded-full bg-primary text-white shadow-xl shadow-primary/40 flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-2 pb-6 flex justify-around items-center z-20">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Garage</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1 font-fill">build</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Service</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Settings</span>
+</a>
+</nav>
+</body></html>
